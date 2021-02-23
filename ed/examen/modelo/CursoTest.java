@@ -7,9 +7,19 @@ import org.junit.Test;
 public class CursoTest {
 	private Curso curso = new Curso();
 	@Test
-	public void testEliminarAlumno() {
-		fail("Not yet implemented");
+	public void testEliminarAlumno() throws Exception {
+		Persona test = new Persona("11111111A", "Alejandro", "Agudelo");
+		curso.aniadirAlumno(test);
+
+		Integer Numerodealumnosantes = curso.numeroAlumnos();
+
+		curso.eliminarAlumno(test.getDni());
+
+		assertEquals(Numerodealumnosantes.intValue() - 1, curso.numeroAlumnos().intValue());
+		assertFalse(curso.estaRegistrado(test.getDni()));
+
 	}
+	
 
 	@Test
 	public void testAniadirAlumno() {
