@@ -23,7 +23,14 @@ public class CursoTest {
 
 	@Test
 	public void testAniadirAlumno() {
-		fail("Not yet implemented");
+		Integer Numerodealumnosantes = curso.numeroAlumnos();
+
+		Persona test = new Persona("11111111A", "Alejandro", "Agudelo");
+		curso.aniadirAlumno(test);
+
+		assertEquals(Numerodealumnosantes.intValue() + 1, curso.numeroAlumnos().intValue());
+		assertTrue(curso.estaRegistrado(test.getDni()));
+
 	}
 
 	@Test
