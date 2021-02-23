@@ -1,5 +1,11 @@
 package ed.examen.modelo;
-
+/**
+ * 
+ * 
+ * @author Alejandro Agudelo
+ * Version 1.0.0
+ *
+ */
 public class Persona{
 	
 	private String dni;
@@ -8,26 +14,38 @@ public class Persona{
 	
 	public Persona() {}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * 
+	 * Constructor que nos permite crear una nueva persona
+	 * 
+	 * @param dni El documento de la persona que queremos crear
+	 * @param nombre nombre de la persona que queremos crear
+	 * @param apellido1 El  apellido de la persona que queremos crear
+	 */
 	public Persona(String dni, String nombre, String apellido1) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido1 = apellido1;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * 
+	 * Metodo que nos permite ver el dni de una persona
+	 * 
+	 * @return devuelve el dni de la persona
+	 */
 	public String getDni() {
 		return dni;
 	}
 	
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+/**
+ * 
+ * Metodo que nos permite cambiar el dni de una persona ya creada
+ * 
+ * @param dni El nuevo dni de la persona
+ * @throws Exception Excepcion lanzada si el ultimo caracter no es una letra
+ */
 	public void setDni(String dni) throws Exception {
 		//comprobacion de si el ultimo caracter es una letra
 		if(Character.isLetter(dni.charAt(dni.length()))) {
@@ -37,30 +55,42 @@ public class Persona{
 		}
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * 
+	 * Metodo que nos muestra el nombre de la persona
+	 * 
+	 * @return nos devuelve el nombre de la persona
+	 */
 	public String getNombre() {
 		return nombre;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * 
+	 * Metodo que nos permite cambiar el nombre de una persona
+	 * 
+	 * @param Nuevo nombre de la persona
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * 
+	 * Metodo que nos muestra el apellido de una persona
+	 * 
+	 * @return nos devuelve el apellido de la persona
+	 */
 	public String getApellido1() {
 		return apellido1;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * 
+	 * Metodo que nos permite cambiar el apellido de una persona
+	 * 
+	 * @param apellido1 Nuevo apellido de la persona
+	 */
 	public void setApellido1(String apellido1) {
 		this.apellido1 = apellido1;
 	}
