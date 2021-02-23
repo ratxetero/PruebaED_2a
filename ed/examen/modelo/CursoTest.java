@@ -23,19 +23,25 @@ public class CursoTest {
 
 	@Test
 	public void testAniadirAlumno() {
-		Integer Numerodealumnosantes = curso.numeroAlumnos();
+		Integer Numerobefore = curso.numeroAlumnos();
 
 		Persona test = new Persona("11111111A", "Alejandro", "Agudelo");
 		curso.aniadirAlumno(test);
 
-		assertEquals(Numerodealumnosantes.intValue() + 1, curso.numeroAlumnos().intValue());
+		assertEquals(Numerobefore.intValue() + 1, curso.numeroAlumnos().intValue());
 		assertTrue(curso.estaRegistrado(test.getDni()));
 
 	}
 
 	@Test
 	public void testEstaRegistrado() {
-		fail("Not yet implemented");
+		Persona test1 = new Persona("11111111A", "Alejandro", "Agudelo");
+		Persona test2 = new Persona("11111111L", "Pedro", "Soldevilla");
+
+		curso.aniadirAlumno(test1);
+
+		assertTrue(curso.estaRegistrado(test1.getDni()));
+		assertFalse(curso.estaRegistrado(test2.getDni()));;
 	}
 
 	@Test
