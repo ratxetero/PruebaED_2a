@@ -34,7 +34,7 @@ public class PersonaTest {
 
 	@Test
 	public void testGetApellido1() {
-		fail("Not yet implemented");
+		assertEquals("Agudelo", p.getApellido1());
 	}
 
 	@Test
