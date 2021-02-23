@@ -21,8 +21,13 @@ public class PersonaTest {
 
 	@Test
 	public void testSetDni() {
-		
-		
+		try {
+			p.setDni("00000000A");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		assertEquals("00000000A", p.getDni());
+
 	}
 
 	@Test
