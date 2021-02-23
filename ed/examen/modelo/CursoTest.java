@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class CursoTest {
-
+	private Curso curso = new Curso();
 	@Test
 	public void testEliminarAlumno() {
 		fail("Not yet implemented");
@@ -28,8 +28,9 @@ public class CursoTest {
 
 	@Test
 	public void testNumeroAlumnos() {
-		fail("Not yet implemented");
-	}
+		assertEquals(curso.numeroAlumnos(), new Integer(0));
+		}
+
 
 	@Test
 	public void testMostrarTodos() {
