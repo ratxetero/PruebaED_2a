@@ -46,18 +46,18 @@ public class CursoTest {
 
 	@Test
 	public void testCurso() {
-		fail("Not yet implemented");
+		Integer Numerobefore = curso.numeroAlumnos();
+			Persona test1 = new Persona("11111111A", "Alejandro", "Agudelo");
+			curso.aniadirAlumno(test1);
+			assertEquals(Numerobefore.intValue() + 1, curso.numeroAlumnos().intValue());
+
 	}
+	
 
 	@Test
 	public void testNumeroAlumnos() {
 		assertEquals(curso.numeroAlumnos(), new Integer(0));
 		}
 
-
-	@Test
-	public void testMostrarTodos() {
-		fail("Not yet implemented");
-	}
 
 }
